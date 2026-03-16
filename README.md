@@ -1,6 +1,6 @@
 # Smart Environment Monitoring & Control System
 
-IoT course assignment project for SWAPD 453, Spring 2026.
+IoT course assignment 1 for SWAPD 453, Spring 2026.
 
 Team members:
 - Ahmed Sameh
