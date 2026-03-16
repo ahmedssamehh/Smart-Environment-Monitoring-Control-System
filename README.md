@@ -12,6 +12,11 @@ This project implements a smart environment monitoring and control system using 
 
 The project was developed and tested in Wokwi for the ESP32 side, with Node-RED used for dashboard visualization and control.
 
+## Demo Video
+
+- Google Drive demo: https://drive.google.com/file/d/1iQA6yTD2n1xcSYEkaDMHUYja5BnvGkQY/view?usp=sharing
+- Local repository video: [Ass1-Iot-Demo video.mp4](Ass1-Iot-Demo%20video.mp4)
+
 ## Implemented Hardware
 
 Sensors:
@@ -149,10 +154,6 @@ From `ESP32-code/libraries.txt`:
 
 ![Screenshot 7](Screenshots/Untitled.png)
 
-## Demo Video
-
-- Google Drive demo: https://drive.google.com/file/d/1iQA6yTD2n1xcSYEkaDMHUYja5BnvGkQY/view?usp=sharing
-- Local repository video: [Ass1-Iot-Demo video.mp4](Ass1-Iot-Demo%20video.mp4)
 
 ## Testing
 
@@ -166,12 +167,3 @@ The project can be tested using the following checks:
 - Check heartbeat updates on `team_env/system/status` every 10 seconds.
 - Compare the live behavior against the attached screenshots and the demo video.
 
-## Notes
-
-- The firmware uses `test.mosquitto.org` as the MQTT broker.
-- The DHT sensor used in the implementation is DHT22, which is acceptable in the assignment.
-- The repository includes Wokwi hardware files and dashboard screenshots for documentation.
-
-## Submission Note
-
-This repository contains the ESP32 code, wiring diagram, screenshots, and demo video. If this repository is used for final submission, the complete exported Node-RED flow and a short report should also be included in the final deliverables package if they are not already available elsewhere.
