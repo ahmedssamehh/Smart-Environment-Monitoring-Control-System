@@ -1,0 +1,17 @@
+[
+    {
+        "id": "alert_history_fn",
+        "type": "function",
+        "z": "tab_alerts",
+        "name": "Build Alert History",
+        "func": "var history = flow.get('alertHistory') || [];\nvar entry = {\n    time: new Date().toLocaleTimeString(),\n    message: msg.payload\n};\nhistory.unshift(entry);\nif (history.length > 50) history.pop();\nflow.set('alertHistory', history);\n\nvar html = '<table style=\"width:100%;border-collapse:collapse;\">';\nhtml += '<tr style=\"background:#333;color:white;\"><th style=\"padding:5px;\">Time</th><th style=\"padding:5px;\">Alert</th></tr>';\nfor (var i = 0; i < history.length; i++) {\n    html += '<tr style=\"border-bottom:1px solid #555;\"><td style=\"padding:5px;\">' + history[i].time + '</td><td style=\"padding:5px;\">' + history[i].message + '</td></tr>';\n}\nhtml += '</table>';\nmsg.payload = html;\nreturn msg;",
+        "outputs": 1,
+        "x": 690,
+        "y": 140,
+        "wires": [
+            [
+                "alert_history_template"
+            ]
+        ]
+    }
+]
